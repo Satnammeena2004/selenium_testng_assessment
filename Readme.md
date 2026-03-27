@@ -1,22 +1,26 @@
 # Selenium Assessment Framework
 
 ## Project Overview
+
 Automated test suite for tutorialsninja.com/demo covering:
+
 - Login flow (valid, invalid)
 - Product search (valid term, invalid term, heading)
-- Add to cart (success message, product name, price)
+- Add to cart (success message, product name)
 
 ## Tech Stack
-| Tool         | Purpose                    |
-|--------------|----------------------------|
-| Selenium 4   | Browser automation         |
-| TestNG 7     | Test runner + annotations  |
-| ExtentReports| HTML test reporting        |
-| Maven        | Build + dependency manager |
-| Jenkins      | CI/CD pipeline             |
-| Git/GitHub   | Version control            |
+
+| Tool          | Purpose                    |
+|---------------|----------------------------|
+| Selenium 4    | Browser automation         |
+| TestNG 7      | Test runner + annotations  |
+| ExtentReports | HTML test reporting        |
+| Maven         | Build + dependency manager |
+| Jenkins       | CI/CD pipeline             |
+| Git/GitHub    | Version control            |
 
 ## Folder Structure
+
 ```
 SeleniumAssessment/
 ├── src/main/java/com/qa/
@@ -29,6 +33,7 @@ SeleniumAssessment/
 ```
 
 ## How to Run Locally
+
 ```bash
 # Run all smoke tests on Chrome
 mvn test -Dgroups=smoke -Dbrowser=chrome
@@ -41,6 +46,7 @@ mvn test -Dtest=LoginTest -Dbrowser=chrome
 ```
 
 ## How to Run via Jenkins
+
 1. Create Pipeline job
 2. Point to this repo
 3. Script Path: Jenkinsfile
@@ -49,16 +55,19 @@ mvn test -Dtest=LoginTest -Dbrowser=chrome
     - SUITE: smoke/regression
 
 ## Test Groups
-| Group      | Tests                        | Count |
-|------------|------------------------------|-------|
-| smoke      | Critical path tests only     | 3     |
-| regression | Full suite                   | 9     |
-| login      | All login tests              | 3     |
-| search     | All search tests             | 3     |
-| cart       | All cart tests               | 3     |
+
+| Group      | Tests                    | Count |
+|------------|--------------------------|-------|
+| smoke      | Critical path tests only | 3     |
+| regression | Full suite               | 6     |
+| login      | All login tests          | 3     |
+| search     | All search tests         | 2     |
+| cart       | All cart tests           | 2     |
 
 ## Reports
+
 After running, open: `reports/TestReport.html`
 
 ## Author
+
 STNAM
