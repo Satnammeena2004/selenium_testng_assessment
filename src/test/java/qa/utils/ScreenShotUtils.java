@@ -25,6 +25,7 @@ public class ScreenShotUtils {
 
         String fileName = testName + "_" + status + "_" + time + ".png";
         String filePath = "screenshots/" + fileName;
+        String fullPath = "reports/" + filePath;
 
         try {
             // Cast driver to TakesScreenshot interface
@@ -35,10 +36,10 @@ public class ScreenShotUtils {
             File tempFile = camera.getScreenshotAs(OutputType.FILE);
 
             // Make sure folder exists
-            new File("screenshots").mkdirs();
+            new File("reports/screenshots").mkdirs();
 
             // Copy temp file to our folder with our name
-            FileUtils.copyFile(tempFile, new File(filePath));
+            FileUtils.copyFile(tempFile, new File(fullPath));
 
         } catch (Exception e) {
             System.out.println("Screenshot failed: " + e.getMessage());

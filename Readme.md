@@ -16,7 +16,6 @@ Automated test suite for tutorialsninja.com/demo covering:
 | TestNG 7      | Test runner + annotations  |
 | ExtentReports | HTML test reporting        |
 | Maven         | Build + dependency manager |
-| Jenkins       | CI/CD pipeline             |
 | Git/GitHub    | Version control            |
 
 ## Folder Structure
@@ -45,20 +44,32 @@ mvn test -Dgroups=regression -Dbrowser=firefox
 mvn test -Dtest=LoginTest -Dbrowser=chrome
 ```
 
-
 ## Test Groups
 
 | Group      | Tests                    | Count |
 |------------|--------------------------|-------|
-| smoke      | Critical path tests only | 3     |
-| regression | Full suite               | 6     |
+| smoke      | Critical path tests only | 4     |
+| regression | Full suite               | 5     |
 | login      | All login tests          | 3     |
-| search     | All search tests         | 2     |
+| search     | All search tests         | 3     |
 | cart       | All cart tests           | 2     |
+| login      | All login tests          | 2     |
 
 ## Reports
 
 After running, open: `reports/TestReport.html`
+
+## Summary
+
+- Successfully designed a Page Object Model-based Selenium framework
+- Implemented TestNG grouping for flexible execution
+- Integrated ExtentReports for detailed HTML reporting
+- Achieved modular, reusable, and scalable test structure
+- Covered critical flows:
+- Login
+- Search
+- Add to Cart
+- Framework supports cross-browser execution via parameters
 
 ## Author
 

@@ -18,8 +18,8 @@ public class ExtentReportManager {
     private static ExtentReports extent;
 
     // Each thread (test) gets its own node in the report
-//    private static final ThreadLocal<ExtentTest> testNode = new ThreadLocal<>();
-    private static ExtentTest testNode ;
+    private static final ThreadLocal<ExtentTest> testNode = new ThreadLocal<>();
+//    private static ExtentTest testNode ;
 
     // Call once when suite starts
     public static void initReport() {
@@ -45,12 +45,12 @@ public class ExtentReportManager {
     // Call at start of each test
     public static void startTest(String testName, String description) {
         ExtentTest node = extent.createTest(testName, description);
-        testNode = node;
+        testNode.set(node);
     }
 
     // Get current test's node (to log steps)
     public static ExtentTest getTest() {
-        return testNode;
+        return testNode.get();
     }
 
     // Call once when suite ends — writes HTML file to disk

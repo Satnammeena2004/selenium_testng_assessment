@@ -1,6 +1,8 @@
 package qa.tests;
 
+import org.testng.annotations.Listeners;
 import qa.base.BaseTest;
+import qa.listeners.TestListeners;
 import qa.pages.HomePage;
 import qa.pages.LoginPage;
 import qa.utils.ConfigReader;
@@ -9,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
+@Listeners(TestListeners.class)
 public class LoginTest extends BaseTest {
 
     private LoginPage loginPage;
@@ -21,7 +23,7 @@ public class LoginTest extends BaseTest {
 
         homePage.clickLogin();
 
-//       ExtentReportManager.getTest().info("Navigated to Login page");
+    //  ExtentReportManager.getTest().info("Navigated to Login page");
     }
 
 

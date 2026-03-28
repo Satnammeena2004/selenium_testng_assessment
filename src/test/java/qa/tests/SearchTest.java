@@ -9,12 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/*
- * SearchTest covers:
- *   - Search with valid term returns results
- *   - Page title matches search term
- *   - Search with invalid term shows no results
- */
+
 public class SearchTest extends BaseTest {
 
     private HomePage homePage;
