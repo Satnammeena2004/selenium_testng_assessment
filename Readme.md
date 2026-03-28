@@ -45,14 +45,6 @@ mvn test -Dgroups=regression -Dbrowser=firefox
 mvn test -Dtest=LoginTest -Dbrowser=chrome
 ```
 
-## How to Run via Jenkins
-
-1. Create Pipeline job
-2. Point to this repo
-3. Script Path: Jenkinsfile
-4. Build with Parameters:
-    - BROWSER: chrome/firefox/edge
-    - SUITE: smoke/regression
 
 ## Test Groups
 

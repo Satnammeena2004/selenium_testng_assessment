@@ -8,12 +8,7 @@
         <listener class-name="qa.listeners.TestListeners"/>
     </listeners>
 
-    <!-- ======== SMOKE SUITE ======== -->
-    <!--
-        Runs only smoke tests.
-        Quick check of critical paths.
-        Takes about 2-3 minutes.
-    -->
+
     <test name="SmokeTests">
         <parameter name="browser" value="chrome"/>
                 <groups>
